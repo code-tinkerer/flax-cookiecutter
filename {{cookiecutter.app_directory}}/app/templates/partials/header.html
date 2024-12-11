@@ -1,6 +1,11 @@
 <header class="py-2 border-b bg-white shadow-sm">
-    <nav class="flex justify-between items-center px-4 sm:px-8">
-        <div class="font-bold">{{cookiecutter.app_name}}</div>
+    <nav class="flex items-center justify-between px-4 sm:px-8">
+        <div class="flex items-center space-x-4">
+            <div class="h-10 w-10 flex items-center justify-center">
+                {% raw %}<img src="{{ url_for('static', filename='favicon.png') }}" alt="icon">{% endraw %}
+            </div>
+            <div class="font-bold text-lg">{{cookiecutter.app_name}}</div>
+        </div>
 
         <ul class="flex space-x-6">
             <li><a href="/">Home</a></li>

@@ -8,8 +8,8 @@ import jinja_partials
 def create_app(config_name="development"):
     app = Flask(__name__, static_folder="../{{cookiecutter.static_folder}}")
 
-    initialize_context(app)
     initialize_config(app, config_name)
+    initialize_context(app)
     initialize_extensions(app)
     initialize_routes(app)
 
@@ -17,6 +17,7 @@ def create_app(config_name="development"):
 
 
 def initialize_context(app: Flask):
+    # set up other variables that will be available in templates
     @app.context_processor
     def inject_app_context():
         return { "app": app }
