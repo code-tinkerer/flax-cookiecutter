@@ -1,0 +1,6 @@
+{
+    "app_directory": "hello",
+    "app_name": "Flask",
+    "static_folder": "public",
+    "main_blueprint": "home"
+}

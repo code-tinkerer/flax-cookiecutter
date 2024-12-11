@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Hello" />
+        <meta name="viewport" content="width=device-width" />
+
+        <!-- <link rel="icon" type="image/png" href="/favicon.png" /> -->
+
+        <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
+        <!--
+        <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+        -->
+        <title>{{cookiecutter.app_name}}</title>
+    </head>
+    <body class="flex flex-col min-h-screen">
+        {% raw %}{{ render_partial("partials/header.html") }}{% endraw %}
+
+        <main class="flex-grow px-4 sm:px-8 py-4 max-w-screen-lg lg:mx-auto">
+            {% raw %}{% block content %}{% endraw %}
+            Put your content here
+            {% raw %} {% endblock %}{% endraw %}
+        </main>
+
+        {% raw %}{{ render_partial("partials/footer.html") }}{% endraw %}
+    </body>
+</html>
