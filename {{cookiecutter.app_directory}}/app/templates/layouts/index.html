@@ -8,9 +8,9 @@
         {% raw %}<link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}" />{% endraw %}
 
         <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
-        <!--
-        <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
-        -->
+
+        {% raw %}<script type="module" src="{{ asset_url('main.js') }}"></script>{% endraw %}
+
         <title>{{cookiecutter.app_name}}</title>
     </head>
     <body class="flex flex-col min-h-screen">

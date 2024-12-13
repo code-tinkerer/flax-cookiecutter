@@ -1,7 +1,7 @@
-from flask import Flask
-
 from dotenv import load_dotenv
 load_dotenv()
+
+from flask import Flask
 
 import jinja_partials
 
@@ -12,6 +12,7 @@ def create_app(config_name="development"):
     initialize_context(app)
     initialize_extensions(app)
     initialize_routes(app)
+    initialize_assets(app)
 
     return app
 
@@ -31,6 +32,7 @@ def initialize_config(app: Flask, config_name="development"):
 
 
 def initialize_extensions(app: Flask):
+    # Jinja partials
     jinja_partials.register_extensions(app)
 
 
@@ -38,3 +40,9 @@ def initialize_routes(app: Flask):
     from app import routes
 
     routes.initialize(app)
+
+
+def initialize_assets(app: Flask):
+    from app import assets
+
+    assets.initialize(app)

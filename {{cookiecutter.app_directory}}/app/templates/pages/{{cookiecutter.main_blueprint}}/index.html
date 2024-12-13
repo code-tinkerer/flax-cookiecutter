@@ -3,5 +3,12 @@
 {% raw %}{% block content %}{% endraw %}
 <div>
     <h1>{{cookiecutter.app_name}}</h1>
+
+    <div x-data="counter">
+        <p x-text="count">hi</p>
+        <button @click="count++">+</button>
+        <span x-text="count"></span>
+        <button @click="count--">-</button>
+    </div>
 </div>
 {% raw %}{% endblock %}{% endraw %}
