@@ -7,7 +7,7 @@
 
         {% raw %}<link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}" />{% endraw %}
 
-        <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
+        {% raw %}<link rel="stylesheet" href="{{ url_for('static', filename='css/tailwind.css') }}">{% endraw %}
 
         {% raw %}<script type="module" src="{{ asset_url('main.js') }}"></script>{% endraw %}
 
@@ -16,7 +16,7 @@
     <body class="flex flex-col min-h-screen">
         {% raw %}{{ render_partial("partials/header.html") }}{% endraw %}
 
-        <main class="flex-grow px-4 sm:px-8 py-4 max-w-screen-lg lg:mx-auto">
+        <main class="flex-grow px-4 sm:px-8 py-4 max-w-screen-lg">
             {% raw %}{% block content %}{% endraw %}
             Put your content here
             {% raw %} {% endblock %}{% endraw %}

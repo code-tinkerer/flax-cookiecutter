@@ -15,7 +15,7 @@ def asset_url(asset_name):
 
         return f"{server_url}/{asset_name}"
 
-    manifest_path = os.path.join(current_app.static_folder, ".vite/manifest.json")
+    manifest_path = os.path.join(current_app.static_folder, "assets/manifest.json")
 
     try:
         with open(manifest_path, "r") as manifest_file:

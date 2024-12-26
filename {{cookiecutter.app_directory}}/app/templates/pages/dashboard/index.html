@@ -1,0 +1,11 @@
+{% raw %}{% extends "layouts/index.html" %}{% endraw %}
+
+{% raw %}{% block content %}{% endraw %}
+<div>
+    <div x-data="counter" class="flex items-center space-x-4 border border-gray-300 rounded-lg">
+        <button class="button button-success w-16 border-r-0 rounded-none rounded-l-lg" @click="count--">-</button>
+        <span x-text="count" class="inline-block w-20 min-w-20 text-center"></span>
+        <button class="button button-success w-16 border-l-0 rounded-none rounded-r-lg" @click="count++">+</button>
+    </div>
+</div>
+{% raw %}{% endblock %}{% endraw %}

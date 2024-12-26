@@ -1,14 +1,9 @@
 {% raw %}{% extends "layouts/index.html" %}{% endraw %}
 
 {% raw %}{% block content %}{% endraw %}
-<div>
-    <h1>{{cookiecutter.app_name}}</h1>
-
-    <div x-data="counter">
-        <p x-text="count">hi</p>
-        <button @click="count++">+</button>
-        <span x-text="count"></span>
-        <button @click="count--">-</button>
-    </div>
+<div class="space-y-4">
+    <p>This is the landing page. And here's the
+        <a href="/dashboard">dashboard</a>.
+    </p>
 </div>
 {% raw %}{% endblock %}{% endraw %}

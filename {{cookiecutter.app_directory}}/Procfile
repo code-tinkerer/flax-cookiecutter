@@ -1,0 +1,4 @@
+web-server: FLASK_APP=main.py FLASK_DEBUG=1 ./venv/bin/python -m flask run
+web-client: npm run dev
+css-client: npx tailwindcss -i main.css -o ./{{cookiecutter.static_folder}}/css/tailwind.css --watch
+
